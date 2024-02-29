@@ -66,10 +66,14 @@ body{
 
 .information .dates{
     font-size: 1.4rem;
-    margin: 1.8rem 0;
+    margin: 2rem 0;
 }
 
-.information h2:hover{
+.information h1{
+    font-size: 2.4rem;
+}
+
+.information h1:hover{
     color: var(--Yellow);
     cursor: pointer;
 }
