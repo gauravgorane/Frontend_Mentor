@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --Very_dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+    --Dark_gray: hsl(0, 0%, 59%);
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--Very_dark_desaturated_blue);
+    text-align: center;
+    min-height: calc(100vh - 0.1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Dark_cyan);
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+    overflow: hidden;
+}
+
+.container{
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    max-width: 36rem;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.container .profile_img img{
+    border-radius: 50%;
+    width: 11rem;
+    margin-top: -60px;
+    border: 0.8rem solid #ffffff;
+}
+
+.container .content h1{
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    padding-top: 1.3rem;
+}
+
+.container .content span{
+    font-size: 1.8rem;
+    font-weight: var(--fw-normal);
+    color: var(--Dark_grayish_blue);
+    padding-left: 0.5rem;
+}
+
+.container .content p{
+    font-size: 1.4rem;
+    font-weight: var(--fw-normal);
+    color: var(--Dark_grayish_blue);
+    padding: 1rem 2rem;
+    margin-bottom: 1.1rem;
+}
+
+.container .feed{
+    border-top: 0.1px solid var(--Dark_gray);
+    padding: 2.5rem;
+}
+
+.container .feed ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container .feed ul li{
+    font-weight: var(--fw-bold);
+}
+
+.container .feed ul li span{
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: var(--fw-normal);
+    margin-top: 0.3rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
