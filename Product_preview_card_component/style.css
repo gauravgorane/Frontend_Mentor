@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --fw_mon_normal: 500;
+    --fw_mon_bold: 700;
+    --fw_fra_bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+img{
+    height: 100%;
+    max-width: 100%;
+}
+
+body{
+    min-height: 100vh;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    display: grid;
+    background-color: var(--White);
+    max-width: 63rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1.6rem;
+}
+
+.container .details{
+    padding: 2.5rem;
+}
+
+.container .details .category{
+    font-size: 1rem;
+    font-weight: var(--fw_mon_normal);
+    color: var(--Dark_grayish_blue);
+    text-transform: uppercase;
+    letter-spacing: 6.5px;
+    margin-bottom: 1.2rem;
+}
+
+.container .details h1{
+    color: var(--Very_dark_blue);
+    font-size: 3.18rem;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: var(--fw_fra_bold);
+    line-height: 1;
+}
+
+.container .details .description{
+    padding: 1.8rem 0;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+.container .rate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.container .rate .price{
+    font-size: 3.2rem;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: var(--fw_fra_bold);
+    color: var(--Dark_cyan);
+}
+
+.container .rate .discount{
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    padding: 0 1.6rem;
+}
+
+.container .details .cart{
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--White);
+    text-align: center;
+    font-weight: var(--fw_mon_bold);
+    border-radius: 0.8rem;
+    background-color: var(--Dark_cyan);
+    border: none;
+    padding: 1.6rem;
+    width: 100%;
+}
+
+.container .details .cart span{
+    padding: 0 1rem;
+}
+
+.container .details .cart:hover{
+    background-color: #112a11;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 630px) {
+    .container{
+        max-width: 60rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container .details{
+        padding: 3rem;
+    }
+    .container .details .category{
+        margin-bottom: 2.6rem;
+    }
+    .container .details .description{
+        padding: 2.4rem 0;
+    }
+    .container .rate{
+        margin: 1rem 0 2rem;
+    }
+}
