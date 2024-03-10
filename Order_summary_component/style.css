@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --Pale_blue: hsl(225, 100%, 94%);
+  --Bright_blue: hsl(245, 75%, 52%);
+  --Very_pale_blue: hsl(225, 100%, 98%);
+  --Desaturated_blue: hsl(224, 23%, 55%);
+  --Dark_blue: hsl(223, 47%, 23%);
+  --fw_light: 500;
+  --fw_normal: 700;
+  --fw_bold: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--Pale_blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.bg_img {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
+  height: 44rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  max-width: 45rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.container .data {
+  padding: 4.8rem 5rem;
+}
+
+.container .data h1 {
+  color: var(--Dark_blue);
+  font-size: 2.9rem;
+}
+
+#about {
+  font-size: 1.66rem;
+  line-height: 1.6;
+  padding: 1.6rem 2rem;
+}
+
+.price_plan {
+  background-color: var(--Very_pale_blue);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2.6rem 2rem;
+}
+
+.price_plan .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  padding-left: 2.2rem;
+}
+
+.details #plan_title {
+  font-size: 1.6rem;
+  font-weight: var(--fw_bold);
+}
+
+.details #pricing {
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+
+.price_plan #plan_change {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Bright_blue);
+}
+
+.price_plan #plan_change:hover{
+  color: #7e97e1;
+  text-decoration: none;
+}
+
+.proceed {
+  font-family: 'Red Hat Display', sans-serif;
+  width: 100%;
+  border: none;
+  color: #fff;
+  background-color: var(--Bright_blue);
+  font-weight: var(--fw_bold);
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  margin: 3rem 0;
+}
+
+.proceed:hover{
+  background-color: #8777f5;
+}
+
+#cancel {
+  display: inline;
+  font-weight: var(--fw_normal);
+  color: var(--Desaturated_blue);
+}
+
+#cancel:hover{
+  color: var(--Dark_blue);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 470px) {
+  .bg_img {
+    background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+    height: 44rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .container {
+    margin: 2.4rem;
+  }
+
+  .container .data {
+    padding: 2.8rem 2.4rem;
+  }
+
+  .container .data h1 {
+    font-size: 2.3rem;
+  }
+
+  #about {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding: 1.6rem 1rem;
+  }
+
+  .price_plan {
+    margin-top: 1rem;
+    padding: 1.6rem 1.6rem;
+  }
+
+  .details {
+    padding-left: 1.8rem;
+  }
+
+  .details #plan_title{
+    font-size: 1.4rem;
+  }
+
+  .details #pricing{
+    font-size: 1.4rem;
+    margin-top: 0.4rem;
+  }
+
+  .price_plan #plan_change {
+    font-size: 1.4rem;
+  }
+
+  .proceed{
+    margin: 2.2rem 0;
+  }
+
+
+
+}
