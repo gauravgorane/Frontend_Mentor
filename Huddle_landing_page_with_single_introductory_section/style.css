@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft_Magenta: hsl(300, 69%, 71%);
+
+    --fw_poppins_normal: 400;
+    --fw_poppins_bold: 600;
+
+    --fw_open_sans_normal: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--Violet);
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    padding: 3rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 0 3rem;
+}
+
+.content{
+    padding: 4rem;
+}
+
+.content h1{
+    line-height: 1.6;
+}
+
+.content p{
+    margin: 1rem 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+}
+
+.btn{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--Violet);
+    padding: 0.8rem 4rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 4px 4px 8px #000000a3;
+}
+
+.btn:hover{
+    background-color: var(--Soft_Magenta);
+    color: white;
+}
+
+.social_media{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin: 1rem 3rem;
+}
+
+.social_media i{
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.social_media i:hover{
+    color: var(--Soft_Magenta);
+    border-color: var(--Soft_Magenta);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:750px) {
+    body{
+        text-align: center;
+        background-image: url(./images/bg-mobile.svg);
+        background-size: contain;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+    .logo img{
+        width: 200px;
+    }
+    .content{
+        padding: 2rem;
+    }
+}
