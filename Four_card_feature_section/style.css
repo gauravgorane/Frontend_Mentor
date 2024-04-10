@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very_Dark_Blue: hsl(234, 12%, 34%);
+    --Grayish_Blue: hsl(229, 6%, 66%);
+    --Very_Light_Gray: hsl(0, 0%, 98%);
+
+    --fw_poppins_light: 200;
+    --fw_poppins_normal: 400;
+    --fw_poppins_bold: 600;
+
+    --gap: 2rem
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3{
+    color: var(--Very_Dark_Blue);
+}
+
+p{
+    color: var(--Grayish_Blue);
+}
+
+body{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    margin: 2rem;
+}
+
+/* Wrapper */
+
+.wrapper{
+    text-align: center;
+    max-width: 500px;
+    padding-top: 3rem;
+    margin: auto;
+}
+
+.wrapper h1{
+    font-size: 2.3rem;
+    font-weight: var(--fw_poppins_light);
+    line-height: 1.45;
+}
+
+.wrapper span{
+    font-weight: var(--fw_poppins_bold);
+}
+
+.desc{
+    padding: 1rem 0;
+    line-height: 1.6;
+}
+
+/* Grid section */
+
+.content{
+    max-width: 1110px;
+    margin: 3rem auto;
+    display: flex;
+    gap: var(--gap);
+}
+
+.content > *{
+    flex: 1;
+}
+
+.col{
+    display: grid;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.card{
+    padding: 2rem;
+    background-color: white;
+    border-top: 5px solid;
+    border-radius: 0.5rem;
+    box-shadow: -5px 5px 1rem hsl(234, 12%, 34%, 0.3);
+}
+
+.card h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.card p{
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+    margin-top: 2.3rem;
+}
+
+/* Border color */
+
+.cyan-border{
+    border-color: var(--Cyan);
+}
+.red-border{
+    border-color: var(--Red);
+}
+.orange-border{
+    border-color: var(--Orange);
+}
+.blue-border{
+    border-color: var(--Blue);
+}
+
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 750px){
+    .wrapper h1{
+        font-size: 1.6rem;
+    }
+    .wrapper span{
+        display: block;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+    }
+    .col{
+        display: grid;
+    }
+    .card img{
+        margin-top: 1.3rem;
+    }
+}
