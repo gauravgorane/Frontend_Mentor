@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@600&display=swap');
+
+:root {
+
+    --Pink: hsl(322, 100%, 66%);
+
+    --Very_Pale_Cyan: hsl(193, 100%, 96%);
+    --Very_Dark_Cyan: hsl(192, 100%, 9%);
+    --Grayish_Blue: hsl(208, 11%, 55%);
+
+    /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Open Sans", sans-serif; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+html{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+.btn{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.btn.primary{
+    padding: 0.8rem 3.6rem;
+    background: white;
+    color: black;
+}
+
+.btn.secondary{
+    padding: 1rem 4rem;
+    background-color: var(--Pink);
+    color: white;
+}
+
+/* Hero Section */
+
+.hero-section{
+    background: var(--Very_Pale_Cyan) url(images/bg-hero-desktop.svg) no-repeat;
+    padding: 2.7rem 4.4rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 11rem;
+    height: auto;
+}
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    margin: 3.6rem 0;
+}
+
+.text-info{
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.text-info h1{
+    font-size: 2.2rem;
+}
+
+.text-info p{
+    line-height: 1.5;
+    margin: 1.6rem 0;
+}
+
+.hero-content .illustration{
+    flex: 1;
+}
+
+/* Feature Section */
+
+.feature-section{
+    padding: 9rem 5.6rem 14rem;
+    position: relative;
+}
+
+.feature{
+    display: flex;
+    padding: 3rem 2rem 3rem 5rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1rem;
+}
+
+.feature .text-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 3rem;
+}
+
+.feature .text-info p{
+    color: var(--Grayish_Blue);
+}
+
+.feature .illustration{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.feature .illustration img{
+    height: 90%;
+}
+
+.feature:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.feature:nth-child(even) .illustration{
+    justify-content: flex-start;
+}
+
+.feature:nth-child(even) .text-info{
+    padding: 0 0rem 0 6rem;
+}
+
+/* Action */
+
+.action{
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-width: 40rem;
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.action .btn{
+    padding: 1.2rem 5rem;
+    font-size: 1rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--Very_Dark_Cyan);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10rem 7rem 5rem;
+    position: relative;
+}
+
+footer .logo img{
+    width: 13rem;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 2rem;
+    max-width: 22rem;
+}
+
+footer .contact p{
+    line-height: 1.5;
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+footer .contact p img{
+    margin-top: 0.3rem;
+    margin-right: 1rem;
+}
+
+footer .footer-links{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer-links .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+.social-links i{
+    font-size: 18px;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+/* Copyright */
+
+.copyright{
+    font-size: 12px;
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+        .hero-section{
+            padding: 2rem;
+            background: var(--Very_Pale_Cyan) url(images/bg-hero-mobile.svg) no-repeat;
+        }
+        .btn.primary{
+            padding: 0.6rem;
+            font-size: 12px;
+        }
+        .logo img{
+            width: 9rem;
+        }
+        .hero-content{
+            flex-direction: column;
+        }
+        .text-info{
+            text-align: center;
+            padding: 0 0 3rem;
+        }
+        .text-info h1{
+            font-size: 1.8rem;
+        }
+        .feature-section{
+            padding: 9rem 2rem;
+        }
+        .feature-section h2{
+            font-size: 1.4rem;
+        }
+        .feature-section p{
+            font-size: 1rem;
+        }
+        .feature{
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 1.8rem;
+        }
+        .feature .text-info{
+            padding: 1rem 0 0;
+        }
+        .feature .illustration{
+            justify-content: center;
+        }
+        .feature .illustration img{
+            width: 80%;
+        }
+        .feature:nth-child(even){
+            flex-direction: column-reverse;
+        }
+        .feature:nth-child(even) .text-info{
+            padding: 1rem 0 0;
+        }
+        .feature:nth-child(even) .illustration{
+            justify-content: center;
+        }
+        .action{
+            width: 18rem;
+            padding: 1rem 0.8rem;
+            border-radius: 1rem;
+            gap: 1rem;
+            text-align: center;
+            bottom: -5rem;
+        }
+        .action h2{
+            font-size: 1.2rem;
+        }
+        .action .btn{
+            padding: 1rem;
+            font-size: 12px;
+        }
+        footer{
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10rem 1rem 5rem;
+        }
+        .footer-links{
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+        .social-links{
+            align-self: center;
+        }
+        .copyright{
+            text-align: center;
+            right: 50%;
+            transform: translateX(50%);
+            max-width: 18rem;
+            width: 100%;
+        }
+}
