@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Pale_Blue: hsl(243, 100%, 93%);
+    --Grayish_Blue: hsl(229, 7%, 55%);
+    --Dark_Blue: hsl(228, 56%, 26%);
+    --Very_Dark_Blue: hsl(229, 57%, 11%);
+
+    --gradient_color1: hsl(6, 100%, 80%);
+    --gradient_color2: hsl(335, 100%, 65%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-color: var(--Very_Dark_Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* File Section */
+
+.file-section{
+    background-color: var(--Dark_Blue);
+    padding: 40px 132px 40px 40px;
+    border-radius: 8px 100px 8px 8px;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+.upload-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.buttons{
+    background-color: var(--Very_Dark_Blue);
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Storage Section */
+
+.storage-section{
+    background-color: var(--Dark_Blue);
+    padding: 40px;
+    border-radius: 8px;
+    width: 540px;
+    position: relative;
+}
+
+.storage-header h1{
+    color: var(--Grayish_Blue);
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+.storage-header h1 span{
+    font-weight: bold;
+    color: var(--Pale_Blue);
+}
+
+.loader{
+    height: 20px;
+    padding: 2px;
+    border-radius: 15px;
+    background-color: var(--Very_Dark_Blue);
+    margin-bottom: 10px;
+}
+
+.loader-status{
+    width: 80%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(90deg, var(--gradient_color1), var(--gradient_color2));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dot{
+    width: 13px;
+    height: 13px;
+    background-color: var(--Pale_Blue);
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+.storage-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--Pale_Blue);
+}
+
+/* Popup */
+
+.popup{
+    position: absolute;
+    background-color: #fff;
+    top: -50px;
+    right: 30px;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+
+.popup p{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--Grayish_Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.popup p span{
+    font-size: 40px;
+    color: var(--Very_Dark_Blue);
+}
+
+.popup::after{
+    content: "";
+    position: absolute;
+    top: 46px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 24px solid transparent;
+    border-left: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    border-right: 24px solid #fff;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 900px) {
+    .file-section{
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    body{
+        background-image: url(./images/bg-mobile.png);
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .file-section{
+        padding-right: 90px;
+    }
+    .storage-section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .popup{
+        top: 130px;
+        right: 80px;
+    }
+    .popup::after{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .file-section{
+        padding-right: 40px;
+    }
+    .popup{
+        top: 150px;
+        right: 30px;
+    }
+}
